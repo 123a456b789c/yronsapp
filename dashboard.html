@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" defer></script>
+    <script src="flagger.js" defer></script>
+    <script src="dashboard.js" defer></script>
+    <title>Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style> 
+</head>
+<body onload="loadConfig();">
+    <nav class="navbar navbar-dark bg-dark justify-content-left">
+        <a class="navbar-brand" style="padding-left: 10px;">Dashboard</a>
+    </nav>
+    <div style="margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+        <h1 style="margin-bottom: 0px;" id="name">Welcome, Lorem Ipsum!</h1>
+        <i id="meta"></i>
+        <div class="card" style="margin-top: 10px;margin-bottom: 10px; width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Contact sharing</h5>
+              <p style="margin-bottom: 0px;">Your e-mail address: <strong id="email"></strong></p>
+        <p style="margin-bottom: 0px;">Your 8 digit contact sharing code: <strong id="sharing_code"></strong></p>
+        <p>Share this code with your fellow delegates, and exchange contact information easily. Or scan this QR-code. <a onclick="toggleQR()" style="text-decoration: underline;" id="QRButton">Show QR-code</a></p>
+
+        <div  style="display: none;" id="qrcode"></div>
+        
+            </div>
+          </div>
+        <h1>Upcoming events</h1>
+        <div id="eventContainer">
+            <div class="card" style="width: 100%;margin-bottom: 10px;">
+                <div class="card-body">
+                  <h5 class="card-title">There are no upcoming events.</h5>
+                  <p class="card-text">No upcoming events for today, try refreshing the page.</p>
+                </div>
+              </div>
+        </div>
+        <h1>Enter a code</h1>
+        <div>
+            <div class="card" style="width: 100%;margin-bottom: 10px;">
+                <div class="card-body">
+                  <h5 class="card-title">Enter a contact sharing code below!</h5>
+                  <input type="text" class="form-control" id="code" placeholder="Enter code here">
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;" onclick="location.href = window.config.address_of_static + 'qrscanned.html?' + document.getElementById('code').value ">Jump</button>
+                </div>
+              </div>    
+        </div>
+        <h1>Links</h1>
+        <div>
+        <a href="https://yrons.org">yrons.org</a><br>
+        <a href="/map.html">Map-view</a><br>
+        <a href="/settings.html">Settings (Profile data)</a><br>
+        <a href="/administrative.html">Administrative database access (staff only)</a><br>
+        <!--<a href="/contact">Send a message</a><br>-->
+        <a href="#" style="padding-bottom: 10px;" onclick="logout()">Log out</a>
+        </div>
+    </div>
+</body>
+</html>

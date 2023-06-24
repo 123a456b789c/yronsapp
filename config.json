@@ -1,0 +1,7 @@
+{
+    "address": "http://localhost:8000",
+    "address_of_static": "http://localhost:8000/",
+    "lat": 47.497913,
+    "long": 19.040236,
+    "zoom": 12
+}
