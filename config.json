@@ -1,6 +1,6 @@
 {
-    "address": "http://localhost:8000",
-    "address_of_static": "http://localhost:8000/",
+    "address": "http://95.138.193.24:8000",
+    "address_of_static": "https://123a456b789c.github.io/yronsapp/",
     "lat": 47.497913,
     "long": 19.040236,
     "zoom": 12
